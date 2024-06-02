@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PNG Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        label {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background: #ccc;
+        }
+        #output {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image to PNG Converter</h1>
+        <input type="file" id="fileInput" accept="image/*">
+        <label for="fileInput">Choose Image</label>
+        <button id="convertButton" onclick="convertImage()" disabled>Convert to PNG</button>
+        <div id="output">
+            <img id="outputImage" src="" alt="Converted Image" style="display: none;">
+            <br>
+            <a id="downloadLink" href="#" download="converted.png" style="display: none;">
+                <button>Download PNG</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="/script.js">
+        
+    </script>
+</body>
+</html>
